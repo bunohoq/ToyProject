@@ -1,0 +1,24 @@
+/* main.css */
+
+/* 회원 정보 */
+#info img {
+	border: 1px solid #AAA;
+	width: 150px; height: 180px;
+	padding: 3px;
+	object-fit: contain;
+}
+#info tr:nth-child(1) td:nth-child(1) {
+	width: 170px;
+	vertical-align: middle;
+}
+#info tr:nth-child(2) th {
+	width: 90px;
+}
+#info tr:nth-child(2) td {
+	width: 225px;
+}
+#info tr:nth-child(3) td {
+	white-space: pre-wrap;
+}
+
+
