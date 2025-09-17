@@ -37,13 +37,16 @@
 		<li><a href="/toy/user/info.do">Info</a></li>		
 		</c:if>
 		
-		<li><a href="/toy/board/list.do">Board</a></li>
+		<li><a href="/toy/board/list.do">Board</a></li>	
 		
 		<!--
 		<li><a href=""></a></li>
 		-->
 	</ul>
 </header>	
+
+
+
 
 
 

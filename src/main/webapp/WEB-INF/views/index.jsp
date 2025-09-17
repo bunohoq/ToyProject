@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>     
 <!DOCTYPE html>
@@ -11,13 +11,37 @@
 	<!-- index.jsp -->
 	<%@ include file="/WEB-INF/views/inc/header.jsp" %>
 	
-	
 	<div id="main">
 		<h1>시작 <small>..</small></h1>
-	
-		<p>시작페이지입니다.</p>
+		
+		<p>시작 페이지입니다.</p>
+		
+		<p>${id}</p>
+		
 	</div>
-	
+		
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -53,7 +53,7 @@ public class UserDAO {
 		//queryParamDTOReturn
 		try {
 					
-			String sql = "select * from tblUser where id = ? and pw = ?";
+			String sql = "select * from tblUser where id = ? and pw = ? and ing = 1";
 			
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, dto.getId());
@@ -82,6 +82,25 @@ public class UserDAO {
 				
 		
 		return null;
+	}
+
+	public int unregister(String id) {
+		
+		//queryParamNoReturn
+		try {
+
+			String sql = "update tblUser set pw = '0000', name = '익명', email = '0000', lv = 1, pic = 'pic.png', intro = '0000', ing = 0 where id = ?";
+
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+
+			return pstat.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return 0;
 	}
 
 }

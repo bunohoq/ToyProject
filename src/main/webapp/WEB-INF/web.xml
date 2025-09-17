@@ -25,6 +25,20 @@
 	</filter-mapping>
 	
 	
+	
+	<filter>
+		<filter-name>auth</filter-name>
+		<filter-class>com.test.toy.filter.AuthFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>auth</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	
 </web-app>
 
 

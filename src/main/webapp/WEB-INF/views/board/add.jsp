@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>     
 <!DOCTYPE html>
@@ -11,11 +11,10 @@
 	<!-- add.jsp -->
 	<%@ include file="/WEB-INF/views/inc/header.jsp" %>
 	
-	
 	<div id="main">
 		<h1>게시판 <small>쓰기</small></h1>
 		
-		<form method="POST" action="/toy/board.add.do"	>
+		<form method="POST" action="/toy/board/add.do">
 		<table class="vertical">
 			<tr>
 				<th>제목</th>
@@ -29,10 +28,32 @@
 		<div>
 			<button type="button" class="back" onclick="location.href='/toy/board/list.do';">돌아가기</button>
 			<button type="submit" class="add primary">쓰기</button>
-		 </div>
+		</div>
 		</form>
 	</div>
-	
+		
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

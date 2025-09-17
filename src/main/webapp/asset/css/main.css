@@ -22,3 +22,61 @@
 }
 
 
+/* 게시판 목록 */
+#list th:nth-child(1) { width: 50px; }
+#list th:nth-child(2) { width: auto; }
+#list th:nth-child(3) { width: 70px; }
+#list th:nth-child(4) { width: 120px; }
+#list th:nth-child(5) { width: 50px; }
+
+#list td:nth-child(2) { 
+	text-align: left;
+	word-break: break-all; 
+}
+
+#list { 
+	margin: 0; 
+	margin-bottom: 1rem;
+}
+#list .isnew {
+	font-size: 14px;
+	color: tomato;
+}
+
+/* 게시판 보기 */
+#view {
+	margin: 0;
+	margin-bottom: 1rem;	
+}
+
+#view tr:nth-child(3) td,
+#view tr:nth-child(4) td {
+	word-break: break-all;
+}  
+
+#view tr:nth-child(4) td {
+	white-space: pre-wrap;
+	padding: 1rem;
+	height: 200px;
+}
+
+
+/* 검색폼 */
+#searchForm {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#labelSearch {
+	margin: .5rem;
+}
+
+
+
+
+
+
+
+
+
+

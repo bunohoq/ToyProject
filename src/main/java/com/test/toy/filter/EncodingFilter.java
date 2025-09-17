@@ -8,7 +8,6 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 //톰캣이 관리
@@ -32,7 +31,7 @@ public class EncodingFilter implements Filter {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
-		//마지막 > 다음필터 or > 서블릿 > 호출
+		//마지막 > 다음 필터 or 서블릿 > 호출
 		chain.doFilter(req, resp);
 		
 	}

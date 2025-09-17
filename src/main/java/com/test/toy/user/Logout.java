@@ -19,17 +19,21 @@ public class Logout extends HttpServlet {
 		//Logout.java
 		//세션 초기화
 		//- 인증 티켓 제거
-		
 		HttpSession session = req.getSession();
 		
 		//session.removeAttribute("id");
 		//session.removeAttribute("name");
 		//session.removeAttribute("lv");
-
+		
 		session.invalidate();
 		
-		resp.sendRedirect("/toy/index.do");
-		
+		resp.sendRedirect("/toy/index.do");		
 	}
 
 }
+
+
+
+
+
+

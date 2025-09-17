@@ -28,22 +28,21 @@ public class Register extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
-		//RegisterOk.java
+
+		//RegisterOk.java 역할
 		//1. 데이터 가져오기
-		//2. DB 
-		//3.
+		//2. DB 작업 > insert
+		//3. 마무리
 		
 		try {
 			
 			MultipartRequest multi = new MultipartRequest(
-											req, 											req.getServletContext().getRealPath("/asset/pic"),
-											1024 * 1024 * 10,
-											"UTF-8",
-											new DefaultFileRenamePolicy()
-														
-					);
-			
+							req,
+							req.getServletContext().getRealPath("/asset/pic"),
+							1024 * 1024 * 10,
+							"UTF-8",
+							new DefaultFileRenamePolicy() 
+						);
 			System.out.println(req.getServletContext().getRealPath("/asset/pic"));
 			
 			String id = multi.getParameter("id");
@@ -64,24 +63,32 @@ public class Register extends HttpServlet {
 			dto.setPic(pic);
 			dto.setIntro(intro);
 			
-			int result = dao.register(dto); 
+			int result = dao.register(dto);
 			
 			if (result > 0) {
 				resp.sendRedirect("/toy/index.do");
-				
 			} else {
-				//resp.setContentType("");
+				//resp.setContentType("text/html");
 				//resp.setCharacterEncoding("UTF-8");
 				resp.getWriter().print("<script>alert('failed');history.back();</script>");
 				resp.getWriter().close();
 			}
 			
-		
-			
+
 		} catch (Exception e) {
-			System.out.println("Register.doPost");
+			System.out.println("Register.doPost()");
 			e.printStackTrace();
 		}
+		
+	
 	}
+	
+	
 
 }
+
+
+
+
+
+

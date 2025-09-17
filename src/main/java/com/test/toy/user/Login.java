@@ -63,7 +63,6 @@ public class Login extends HttpServlet {
 		} else {
 			
 			//로그인 실패
-			//resp.setContentType("text/html");
 			//resp.setCharacterEncoding("UTF-8");
 			resp.getWriter().print("<html><meta charset='UTF-8'><script>alert('로그인 실패');history.back();</script></html>");
 			resp.getWriter().close();

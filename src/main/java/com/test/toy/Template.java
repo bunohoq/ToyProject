@@ -1,7 +1,6 @@
 package com.test.toy;
 
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +15,7 @@ public class Template extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		//Template.java
+		
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/template.jsp");
 		dispatcher.forward(req, resp);

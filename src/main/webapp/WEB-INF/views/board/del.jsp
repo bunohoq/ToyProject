@@ -1,24 +1,50 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>     
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK" />
-	<style>
-		
-	</style>
+	<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 </head>
 <body>
-	<!--  -->
+	<!-- del.jsp -->
+	<%@ include file="/WEB-INF/views/inc/header.jsp" %>
 	
-	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-	<script src="https://bit.ly/4cMuheh"></script>
-	<script>
+	<div id="main">
+		<h1>게시판 <small>삭제하기</small></h1>
 		
-	</script>
+		<form method="POST" action="/toy/board/del.do">
+		<div>
+			<button type="button" class="back" onclick="location.href='/toy/board/view.do?seq=${seq}';">돌아가기</button>
+			<button type="submit" class="del primary">삭제하기</button>
+		</div>
+		<input type="hidden" name="seq" value="${seq}">
+		</form>
+	</div>
+		
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
