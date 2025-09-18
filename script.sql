@@ -50,7 +50,7 @@ select * from tblBoard;
 create or replace view vwBoard
 as
 select 
-    seq, subject, id, readcount, regdate,
+    seq, subject, id, readcount, regdate, content,
     (select name from tblUser where id = tblBoard.id) as name,
     (sysdate - regdate) as isnew
 from tblBoard 
@@ -58,6 +58,20 @@ from tblBoard
 
 
 select * from vwBoard;
+
+update tblBoard set regdate = regdate - 5 where seq = 1;
+update tblBoard set regdate = regdate - 3.5 where seq = 2;
+update tblBoard set regdate = regdate - 2.3 where seq = 3;
+update tblBoard set regdate = regdate - 1.4 where seq = 4;
+commit;
+
+select count(*) from tblBoard; --262
+
+select * from vwBoard;
+
+
+
+
 
 
 

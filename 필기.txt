@@ -117,6 +117,18 @@
 
 
 
+
+날짜 자르기
+
+무언가? > 최대한 빨리!!
+1. SQL > DB
+2. Servlet > 컨트롤러
+3. JSP > 뷰
+
+
+
+
+
 게시판 정책
 - CRUD
 - 목록보기, 상세보기 > 미인증(O), 인증(O)
@@ -129,6 +141,14 @@
 검색
 - /toy/board/list.do
 - /toy/board/list.do?column=subject&word=java
+
+
+
+페이징
+- 게시물을 일정 개수만큼 가져오는 기법
+- 페이지 길어짐(네트워크 트래픽, 성능 저하)
+- 페이지 개념 > 오라클(rownum, fetch)
+- com.test.toy.board > "Dummy.java"
 
 
 

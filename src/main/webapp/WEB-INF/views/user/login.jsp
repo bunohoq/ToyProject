@@ -42,6 +42,11 @@
 			<input type="submit" value="  홍길동(hong)  ">
 		</form>
 		<form method="POST" action="/toy/user/login.do">
+			<input type="hidden" name="id" value="dog">
+			<input type="hidden" name="pw" value="1111">
+			<input type="submit" value="  강아지(dog)  ">
+		</form>
+		<form method="POST" action="/toy/user/login.do">
 			<input type="hidden" name="id" value="cat">
 			<input type="hidden" name="pw" value="1111">
 			<input type="submit" value="  고양이(cat)  ">

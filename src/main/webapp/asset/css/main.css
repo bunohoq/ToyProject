@@ -43,6 +43,13 @@
 	color: tomato;
 }
 
+#pagebar {
+	text-align: center;
+	margin: 1rem;
+}
+
+
+
 /* 게시판 보기 */
 #view {
 	margin: 0;
