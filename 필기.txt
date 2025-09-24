@@ -1,0 +1,225 @@
+새프로젝트
+1. Dynamic Web Project
+2. Project name: "ToyProject"
+   > Context root: "toy"
+   > web.xml 체크
+
+1. 주제
+	- 미정
+	
+2. 요구분석
+	- 회원 관리(가입 ~ 인증 ~ 탈퇴)
+	- 게시판
+	- 기타 등..
+
+3. 페이지 구성(관계도)
+	- draw.io
+	
+4. 화면 설계도
+	- 생략
+	
+4. 스토리 보드
+	- 생략 
+
+5. 데이터베이스
+	- ERD	  
+
+6. 스크립트
+	- DDL, DML
+	- ToyProject > "script.sql"
+
+7. 구현
+	- 패키지 + 서블릿
+		- "com.test.toy": 메인 패키지
+			- "Index.java": 시작 페이지
+			- "Template.java": 템플릿
+		- "com.test.toy.user": 회원 패키지
+			- "Register.java": 회원 가입폼 + 처리
+			- "Unregister.java": 회원 탈퇴
+			- "Login.java": 로그인
+			- "Logout.java": 로그아웃
+			- "Info.java": 회원정보
+		- "com.test.toy.user.model"
+			- "UserDAO.java"
+			- "UserDTO.java"
+			- "UserLogDTO.java"
+		
+		- "com.test.toy.board"
+			- "List.java"
+			- "View.java"
+			- "Add.java"
+			- "Edit.java"
+			- "Del.java"
+			- "ScrapBook.java"
+		- "com.test.toy.board.model"
+		    - "BoardDAO.java"
+		    - "BoardDTO.java"
+		    - "CommentDTO.java"
+		  
+		- "com.test.toy.filter" > 필터 등록(web.xml)
+			- "EncodingFilter.java"
+			- "AuthFilter.java"
+			- "LogFilter.java"
+			
+		- "com.test.toy.comment" > Ajax 응답용 서블릿
+			- "AddComment.java"
+			- "DelComment.java"
+			- "EditComment.java"
+			- "MoreComment.java"
+		
+		- "com.test.toy.admin" > 관리자
+			- "Log.java"
+			- "LoadLog.java"
+			- "ListLog.java"
+			
+		- "com.test.toy.admin.model"
+			- "LogDAO.java"
+			- "LogDTO.java"
+		
+	- JSP 페이지
+		- "views"
+			- "index.jsp"
+			- "template.jsp"
+		- views > "user"
+				  - "register.jsp"
+				  - "unregister.jsp"
+				  - "login.jsp"
+				  - "logout.jsp"
+				  - "info.jsp"
+		
+		- views > "board"
+				  - "list.jsp"
+				  - "view.jsp"
+				  - "add.jsp"
+				  - "edit.jsp"
+				  - "del.jsp"
+				  - "scrapbook.jsp"
+	
+		- views > "admin"
+				  - "log.jsp"
+	
+	- 공통 리소스
+		- views > "inc"
+				   - "asset.jsp"
+				   - "header.jsp"
+		- webapp > "asset"
+						> "css"
+							- "main.css"
+						> "js"
+							- "main.js"
+						> "images"
+						> "pic": 프로필 사진
+						- favicon.png
+	
+	- 라이브러리
+		- lib
+			- ojdbc
+			- util
+			- lombok
+			- jstl
+			- cos
+			- json-simple
+			
+
+
+
+
+
+제목, 내용 > 태그 작성
+
+1. 사용자 입력
+- <div>홍길동</div>
+
+2. 언제 못쓰게 만들지?
+2.1 입력 > 개입 > DB 입력
+  - &lt;div&gt;홍길동&lt;/div&gt;
+2.2 입력 그대로
+ - <div>홍길동</div>
+       출력 바꾸기
+  - &lt;div&gt;홍길동&lt;/div&gt;
+
+
+
+
+날짜 자르기
+
+무언가? > 최대한 빨리!!
+1. SQL > DB
+2. Servlet > 컨트롤러
+3. JSP > 뷰
+
+
+
+
+
+게시판 정책
+- CRUD
+- 목록보기, 상세보기 > 미인증(O), 인증(O)
+- 글쓰기, 수정하기, 삭제하기 > 미인증(X), 인증(O) > 방식 > 노출제어
+- 수정하기, 삭제하기 > 인증(O) + 본인만 가능
+- 수정하기, 삭제하기 > 관리자(모든 글에 가능)
+
+
+
+검색
+- /toy/board/list.do
+- /toy/board/list.do?column=subject&word=java
+
+
+
+페이징
+- 게시물을 일정 개수만큼 가져오는 기법
+- 페이지 길어짐(네트워크 트래픽, 성능 저하)
+- 페이지 개념 > 오라클(rownum, fetch)
+- com.test.toy.board > "Dummy.java"
+
+
+
+
+게시물 삭제 > 댓글 존재
+1. 게시물 + 댓글  > 모두 삭제
+2. 게시물 삭제 금지
+
+
+
+파일 업로드
+
+
+
+해시 태그
+- #사진, #놀이, #테스트
+- 분류 + 검색
+
+
+- 신고 > 작성자 이외 유저 > 버튼 클릭 > 해당글+1
+- 공감 > ♡ > 버튼 클릭 > +1
+- 스크랩 > 
+- 공유 > SNS > 게시물 등록 화면 연결
+         > 현재 게시물의 URL를 클립보드 복사
+
+
+
+유저 > 활동 내역
+- 인증 유저
+- *.do
+- 필터 사용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

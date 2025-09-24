@@ -1,0 +1,216 @@
+/* main.css */
+
+/* 회원 정보 */
+#info img {
+	border: 1px solid #AAA;
+	width: 150px; height: 180px;
+	padding: 3px;
+	object-fit: contain;
+}
+#info tr:nth-child(1) td:nth-child(1) {
+	width: 170px;
+	vertical-align: middle;
+}
+#info tr:nth-child(2) th {
+	width: 90px;
+}
+#info tr:nth-child(2) td {
+	width: 225px;
+}
+#info tr:nth-child(3) td {
+	white-space: pre-wrap;
+}
+
+
+/* 게시판 목록 */
+#list th:nth-child(1) { width: 50px; }
+#list th:nth-child(2) { width: auto; }
+#list th:nth-child(3) { width: 70px; }
+#list th:nth-child(4) { width: 120px; }
+#list th:nth-child(5) { width: 50px; }
+
+#list td:nth-child(2) { 
+	text-align: left;
+	word-break: break-all; 
+}
+
+#list { 
+	margin: 0; 
+	margin-bottom: 1rem;
+}
+#list .isnew {
+	font-size: 14px;
+	color: tomato;
+}
+
+#pagebar {
+	text-align: center;
+	margin: 1rem;
+}
+
+
+
+/* 게시판 보기 */
+#view {
+	margin: 0;
+	margin-bottom: 1rem;	
+}
+
+#view tr:nth-child(3) td,
+#view tr:nth-child(4) td {
+	word-break: break-all;
+}  
+
+#view tr:nth-child(4) td {
+	white-space: pre-wrap;
+	padding: 1rem;
+	height: 200px;
+}
+
+
+/* 검색폼 */
+#searchForm {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#labelSearch {
+	margin: .5rem;
+}
+
+
+/* 댓글 */
+#comment td:nth-child(1) { width: auto; }
+#comment td:nth-child(2) { width: 150px; text-align: center; }
+#comment .commentContent div:last-child { font-size: 12px; text-align: right; }
+
+#addComment td:nth-child(1) { width: auto; }
+#addComment td:nth-child(2) { width: 150px; text-align: center; }
+
+.commentInfo span, .commentEdit span { 
+	cursor: pointer;
+}
+
+.commentInfo span:hover, .commentEdit span:hover { 
+	color: cornflowerblue; 
+}
+
+.commentEditRow {
+	background: rgba(0, 0, 0, .05);
+}
+
+.commentCount {
+	font-size: 12px;
+}
+.commentCount > span {
+	font-size: 14px;
+}
+
+#imgPlace {
+	max-width: 570px;
+	margin: 1rem 0px;
+}
+
+#map {
+	width: 570px;
+	height: 300px;
+}
+
+.tagify.full {
+	border-color: #BBB;
+	border-radius: 3px;
+	width: calc(100% - 5px);
+}
+
+
+/* 로그 달력 */
+#tblCalendar {
+	
+}
+
+#tblCalendar th { width: 108px; }
+#tblCalendar td { 
+	height: 90px;
+	position: relative; 
+}	
+#tblCalendar .no {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 14px;
+}
+#tblCalendar td:first-child .no {
+	color: tomato;
+}
+#tblCalendar td:last-child .no {
+	color: cornflowerblue;
+}
+
+
+
+
+
+
+
+
+
+
+#tblCalendar div {
+	margin-top: 15px;
+}
+#tblCalendar div > span {
+	border-radius: 50%;
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	text-align: center;
+	padding-top: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 2px;
+}
+#tblCalendar div > .lcnt {
+	background: tomato;
+	color: white;
+}
+#tblCalendar div > .bcnt {
+	background: cornflowerblue;
+	color: white;
+}
+#tblCalendar div > .ccnt {
+	background: gold;
+}
+
+
+#titleCalendar {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	width: 736px;
+	user-select: none;
+}
+
+#titleCalendar span:first-child span:last-child {
+	font-size: 1rem;
+}
+
+#titleCalendar .material-symbols-outlined {
+	cursor: pointer;
+}
+#titleCalendar .material-symbols-outlined:hover {
+	color: cornflowerblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
